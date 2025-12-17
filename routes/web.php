@@ -1,12 +1,12 @@
 <?php
 
+use App\Http\Controllers\AddressController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BannerController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\AddressController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -97,3 +97,4 @@ Route::post('addresses', [AddressController::class, 'store'])->name('addresses.s
 Route::delete('addresses/{address}', [AddressController::class, 'destroy'])->name('addresses.destroy');
 
 Route::get('/address', [AddressController::class, 'index'])->name('address');
+
