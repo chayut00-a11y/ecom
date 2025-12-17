@@ -1,0 +1,228 @@
+// Fonts
+@import url('https://fonts.bunny.net/css?family=Nunito');
+
+
+// Variables
+@import 'variables';
+
+$sidebar-width: 200px;
+$sidebar-bg-color: #f1f1f1;
+$sidebar-text-color: #333;
+$sidebar-text-color-hover: #fff;
+$sidebar-bg-color-hover: #333;
+$sidebar-border-color: #ddd;
+
+
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+
+@keyframes fade-in {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+.fade-in {
+  animation-name: fade-in;
+  animation-duration: 3s;
+}
+
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+
+.text-product{
+  display: none;
+  position: absolute;
+  top: 50%;
+  bottom: 0;
+  left: 50%;
+  right: 0;
+  transform: translateX(-50%) translateY(-50%);
+
+
+}
+.hover-show-product:hover{
+  .text-product{
+    display: block;
+  }
+}
+
+.image-container:hover .image-overlay {
+  opacity: 1;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+
+.carousel-container {
+  width: 50%;
+  margin: auto;
+}
+
+.banner{
+  max-height: 600px;
+
+}
+
+.block-product{
+  display: block;
+  border: solid 1px black;
+  border-radius: 15px;
+  padding: 15px;
+
+}
+
+.bg-image{
+    background-image: url('/bg2.jpg');
+    padding-top: 50px;
+}
+
+
+.block-sidebar-menu {
+  left: 0;
+  background-color: #f5f5f5;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+
+.block-sidebar {
+    padding-top: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: #CCC;
+
+    .list-menu {
+        li {
+            margin: 10px 0;
+        }
+        a {
+            background: #CCC;
+            padding: 15px;
+            // margin-bottom: 10px;
+            color: black;
+            display: block;
+            // border: solid 1px black;
+            // border-radius: 15px;
+        }
+    }
+}
+
+.block-profile {
+    background-color: white;
+    border-radius: 15px;
+    display: block;
+    border: solid 1px grey;
+    padding: 15px;
+    
+}
+
+.block-order {
+    background-color: white;
+    border-radius: 15px;
+    display: block;
+    border: solid 1px grey;
+    padding: 15px;
+
+}
+
+.custom-content {
+    min-height: 750px;
+    // padding-top: 50px;
+}
+
+.block-login {
+    border: solid 1px grey;
+    border-radius: 15px;
+    padding: 100px;
+    display: block;
+    
+}
+
+.block-register {
+    border: solid 1px grey;
+    border-radius: 15px;
+    padding: 100px;
+    display: block;
+}
+
+// .img {
+//     // width: 300px;
+//     // height: 300px;
+// }
+
+.sidebar {
+    width: $sidebar-width;
+    background-color: $sidebar-bg-color;
+    font-family: Arial, sans-serif;
+  
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+  
+      li {
+        padding: 10px;
+        border-bottom: 1px solid $sidebar-border-color;
+  
+        &:hover {
+          background-color: $sidebar-bg-color-hover;
+  
+          a {
+            color: $sidebar-text-color-hover;
+          }
+        }
+  
+        > a {
+          display: block;
+          color: $sidebar-text-color;
+          text-decoration: none;
+        }
+  
+        ul {
+          display: none;
+  
+          &.active {
+            display: block;
+          }
+  
+          li {
+            padding-left: 10px;
+            border-bottom: none;
+  
+            &:hover {
+              background-color: $sidebar-bg-color-hover;
+            }
+  
+            > a {
+              color: $sidebar-text-color;
+            }
+          }
+        }
+      }
+    }
+  }
